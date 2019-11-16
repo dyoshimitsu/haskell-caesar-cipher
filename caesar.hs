@@ -23,3 +23,6 @@ percent n m = (fromIntegral n / fromIntegral m) * 100
 
 lowers :: String -> Int
 lowers xs = length [x | x <- xs, x >= 'a' && x <= 'z']
+
+count :: Char -> String -> Int
+count x xs = length [x' | x' <- xs, x == x']

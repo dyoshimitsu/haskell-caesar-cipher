@@ -39,3 +39,10 @@ rotate n xs = drop n xs ++ take n xs
 
 positions :: Eq a => a -> [a] -> [Int]
 positions x xs = [i | (x',i) <- zip xs [0..], x == x']
+
+crack :: String -> String
+crack xs = encode (-factor) xs
+  where
+    factor = head(positions (minimum chitab) chitab)
+    chitab = [chisqr (rotate n table') table | n <- [0..25]]
+    table' = freqs xs

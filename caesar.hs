@@ -26,3 +26,7 @@ lowers xs = length [x | x <- xs, x >= 'a' && x <= 'z']
 
 count :: Char -> String -> Int
 count x xs = length [x' | x' <- xs, x == x']
+
+freqs :: String -> [Float]
+freqs xs = [percent (count x xs) n | x <- ['a'..'z']]
+           where n = lowers xs

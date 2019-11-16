@@ -34,5 +34,5 @@ freqs xs = [percent (count x xs) n | x <- ['a'..'z']]
 chisqr :: [Float] -> [Float] -> Float
 chisqr os es = sum [((o - e)^2)/e | (o,e) <- zip os es]
 
-routate :: Int -> [a] -> [a]
-routate n xs = drop n xs ++ take n xs
+rotate :: Int -> [a] -> [a]
+rotate n xs = drop n xs ++ take n xs

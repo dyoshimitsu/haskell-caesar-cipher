@@ -20,3 +20,6 @@ table = [8.1, 1.5, 2.8, 4.2, 12.7, 2.2, 2.0, 6.1, 7.0,
 
 percent :: Int -> Int -> Float
 percent n m = (fromIntegral n / fromIntegral m) * 100
+
+lowers :: String -> Int
+lowers xs = length [x | x <- xs, x >= 'a' && x <= 'z']

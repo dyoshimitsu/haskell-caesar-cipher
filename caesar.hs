@@ -36,3 +36,6 @@ chisqr os es = sum [((o - e)^2)/e | (o,e) <- zip os es]
 
 rotate :: Int -> [a] -> [a]
 rotate n xs = drop n xs ++ take n xs
+
+positions :: Eq a => a -> [a] -> [Int]
+positions x xs = [i | (x',i) <- zip xs [0..], x == x']

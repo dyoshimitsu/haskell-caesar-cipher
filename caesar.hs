@@ -30,3 +30,6 @@ count x xs = length [x' | x' <- xs, x == x']
 freqs :: String -> [Float]
 freqs xs = [percent (count x xs) n | x <- ['a'..'z']]
            where n = lowers xs
+
+chisqr :: [Float] -> [Float] -> Float
+chisqr os es = sum [((o - e)^2)/e | (o,e) <- zip os es]
